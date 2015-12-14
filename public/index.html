@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta />
+  <title>2016大選即時開票</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <h1 class="heading-vote">2016大選即時開票</h1>
+  <div class="container-open-mobile">
+    <section class="candidate-president candidate-president-mjd">
+      <div class="candidate-no">1.</div>
+      <div class="candidate-name">蔡英文
+        <br/>陳建仁</div>
+      <div class="candidate-flag">
+        <div class="flag mjd"></div>
+      </div>
+      <div class="candidate-data">
+        <meter value="0" min="0" max="100" class="progress mjd">
+          <div class="meter-gauge">
+            <span></span>
+          </div>
+        </meter>
+        <div class="vote-total">得票數
+          <span> </span>票</div>
+        <div class="vote-percent">得票率
+          <span>0</span>%</div>
+      </div>
+      <div class="candidate-elected">
+        <div class="flag"></div>
+      </div>
+    </section>
+    <section class="candidate-president candidate-president-gmd">
+      <div class="candidate-no">2.</div>
+      <div class="candidate-name">朱立倫
+        <br/>王如玄</div>
+      <div class="candidate-flag">
+        <div class="flag gmd"></div>
+      </div>
+      <div class="candidate-data">
+        <meter value="0" min="0" max="100" class="progress gmd">
+          <div class="meter-gauge">
+            <span></span>
+          </div>
+        </meter>
+        <div class="vote-total">得票數
+          <span> </span>票</div>
+        <div class="vote-percent">得票率
+          <span>0</span>%</div>
+      </div>
+      <div class="candidate-elected">
+        <div class="flag"></div>
+      </div>
+    </section>
+    <section class="candidate-president candidate-president-qmd">
+      <div class="candidate-no">3.</div>
+      <div class="candidate-name">宋楚瑜
+        <br/>徐欣螢</div>
+      <div class="candidate-flag">
+        <div class="flag qmd"></div>
+      </div>
+      <div class="candidate-data">
+        <meter value="0" min="0" max="100" class="progress qmd">
+          <div class="meter-gauge">
+            <span></span>
+          </div>
+        </meter>
+        <div class="vote-total">得票數
+          <span> </span>票</div>
+        <div class="vote-percent">得票率
+          <span>0</span>%</div>
+      </div>
+      <div class="candidate-elected">
+        <div class="flag"></div>
+      </div>
+    </section>
+    <section class="election-info">
+      <span class="flag flag-grey annouceL"></span>為候選人自行宣布當選，
+      <span class="flag flag-grey winL"></span>為中選會確認當選。資料如有出入，以中選會為準。</section>
+    <button class="extralink">看更多立委開票數據</button>
+  </div>
+  <div class="history-year-container current-data">
+    <aside class="history-year-container-data area">
+      <h3><span class="president-title_year">2016</span>年 - 第<span class="president-title_period">14</span>任總統大選結果</h3>
+      <section class="history-year-datatable">
+        <table class="vote-result_table">
+          <thead>
+            <tr>
+              <th class="vote-no-col">號次</th>
+              <th>政黨</th>
+              <th colspan="2">候選人</th>
+              <th colspan="2"> 得票</th>
+              <th>狀態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="merge-data">
+              <td class="vote-no-col">&nbsp; </td>
+              <td>&nbsp;</td>
+              <td>總統</td>
+              <td>副總統</td>
+              <td>得票數</td>
+              <td>得票率</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="all-calculated">
+        <aside class="calculate-all">
+          <table class="calculate-result_table">
+            <tr>
+              <td class="merge-data">選舉人數</td>
+              <td id="residentTotal" class="actual-data_cal">0</td>
+            </tr>
+            <tr>
+              <td class="merge-data">投票數</td>
+              <td id="voteTotal" class="actual-data_cal">0</td>
+            </tr>
+            <tr>
+              <td class="merge-data">有效票</td>
+              <td id="validTotal" class="actual-data_cal">0 </td>
+            </tr>
+            <tr>
+              <td class="merge-data">無效票</td>
+              <td id="invalidTotal" class="actual-data_cal">0</td>
+            </tr>
+            <tr>
+              <td class="merge-data">投票率</td>
+              <td id="percentageVote" class="actual-data_cal">0</td>
+            </tr>
+          </table>
+        </aside>
+        <aside class="pie-container">
+          <div id="pieData" style="width: 100%; margin: 0 auto"></div>
+        </aside>
+      </section>
+    </aside>
+    <aside class="history-year-container-map area">
+      <h3>總統選舉 結果總覽地圖</h3>
+      <div id="infochart" style="width: 100%; margin: 0 auto; min-height: 800px;"></div>
+      <section class="map-note">注：2010年5都改制前選舉票數，台北縣為新北市。台中縣市合併計算為台中市。台南縣市合併計算為台南市。高雄縣市合併計算為高雄市。</section>
+    </aside>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/maps/modules/map.js"></script>
+  <script src="js/taiwan.js" charset="utf-8"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

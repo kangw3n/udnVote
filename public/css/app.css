@@ -1,0 +1,449 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: '微軟正黑體', 'Microsoft JhengHei', 'LiHei Pro';
+  background: #991a1a;
+}
+
+.heading-vote {
+  color: white;
+  text-align: center;
+  margin: 8px 0;
+  font-size: 22px;
+}
+
+.container-open-mobile {
+  background: white;
+  margin: 0 8px;
+  padding: 10px;
+}
+
+.candidate-president {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+  align-content: flex-start;
+  padding: 8px 0;
+}
+
+.candidate-no {
+  /*background: #663;*/
+  flex: 1 0 auto;
+}
+
+.candidate-name {
+  /*background: red;*/
+  flex: 1 0 auto;
+}
+
+.candidate-flag {
+  /*background: green;*/
+  flex: 1 0 auto;
+}
+
+.candidate-data {
+  /*background: yellow;*/
+  flex: 4 0 auto;
+}
+
+.candidate-elected {
+  /*background: blue;*/
+  flex: 1 0 auto;
+}
+
+.progress {
+  width: 100%;
+}
+
+meter {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #d7d7d7 inset;
+}
+
+meter::-moz-meter-bar {
+  background: none;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #d7d7d7 inset;
+}
+
+meter::-webkit-meter-optimum-value,
+meter::-webkit-meter-suboptimum-value,
+meter::-webkit-meter-even-less-good-value {
+    transition: 1s width ease;
+}
+
+meter::-moz-meter-optimum,
+meter::-moz-meter-sub-optimum,
+meter::-moz-meter-sub-sub-optimum {
+    transition: 1s width ease;
+}
+
+meter.mjd::-webkit-meter-optimum-value {
+  background: rgb(82, 163, 49);
+}
+
+meter.mjd::-moz-meter-bar {
+  background: rgb(82, 163, 49);
+}
+
+meter.gmd::-webkit-meter-optimum-value {
+  background: rgb(49, 111, 207);
+}
+
+meter.gmd::-moz-meter-bar {
+  background: rgb(49, 111, 207);
+}
+
+meter.qmd::-webkit-meter-optimum-value {
+  background: rgb(255, 153, 0);
+}
+
+meter.qmd::-moz-meter-bar {
+  background: rgb(255, 153, 0);
+}
+
+
+/* progressive enhancanment*/
+
+.meter-gauge {
+  border-radius: 3px;
+  background-color: whiteSmoke;
+  box-shadow: 0 5px 5px -5px #d7d7d7 inset;
+  height: 20px;
+  display: block;
+}
+
+.meter-gauge > span {
+  height: inherit;
+  display: block;
+  width: 0;
+  transition: width 1s ease;
+}
+
+meter.mjd .meter-gauge > span {
+  background: rgb(82, 163, 49);
+}
+
+meter.gmd .meter-gauge > span {
+  background: rgb(49, 111, 207);
+}
+
+meter.qmd .meter-gauge > span {
+  background: rgb(255, 153, 0);
+}
+/* history page!*/
+
+.map-tooltips_title {
+  font-size: 1.8rem;
+  font-weight: bolder;
+
+  text-decoration: underline;
+}
+
+.map-tooltips_elected {
+  font-weight: bolder;
+}
+.map-tooltips_elected-color-mjd {
+  color: rgb(82, 163, 49);
+}
+.map-tooltips_elected-color-gmd {
+  color: rgb(49, 111, 207);
+}
+.map-tooltips_elected-color-qmd {
+  color: rgb(255, 153, 0);
+}
+
+.vote-total,
+.vote-percent {
+  font-size: 14px;
+}
+
+.flag {
+  width: 30px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 4px;
+}
+
+.flag.mjd {
+  background-image: url("../img/map/badge2.png");
+}
+
+.flag.gmd {
+  background-image: url("../img/map/badge1.png");
+}
+
+.flag.elected {
+  background-image: url("../img/map/wins.png");
+}
+
+.flag.self-announces {
+  background-image: url("../img/map/annouce.png");
+}
+
+.flag.qmd {
+  background-image: url("../img/map/badge9.png");
+}
+
+.flag-grey {
+  display: inline-block;
+  margin-bottom: 0;
+  position: relative;
+  top: 4px;
+  width: 24px;
+}
+
+.flag.annouceL {
+  background-image: url("../img/map/annouceLogo.png");
+}
+
+.flag.winL {
+  background-image: url("../img/map/winsLogo.png");
+}
+
+.election-info {
+  width: 100%;
+  font-size: 14px;
+  color: #909090;
+  margin: 0 auto;
+  /*height: 40px;*/
+}
+
+.extralink {
+  width: 80%;
+  margin: 10px auto 5px auto;
+  display: block;
+  text-align: center;
+  color: white;
+  background: #666;
+  font-size: 20px;
+  border: none;
+  padding: 5px 0;
+}
+
+/* temp*/
+.history-year-container-map {
+  background: white;
+  padding:  8px;
+  margin: 8px 0;
+}
+
+.thumb-tooltips {
+  position: relative;
+  top: 6px;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.thumb-tooltips-gmd {
+  background-image: url('../img/map/badge1.png');
+}
+
+.thumb-tooltips-mjd {
+  background-image: url('../img/map/badge2.png');
+}
+
+.thumb-tooltips-no {
+  background-image: url('../img/map/badge8.png');
+}
+
+.thumb-tooltips-qmd {
+  background-image: url('../img/map/badge9.png');
+}
+
+.thumb-tooltips-winner {
+  background-image: url('../img/map/wins.png');
+}
+
+.thumb-tooltips-ahead {
+  background-image: url('../img/map/annouce.png');
+}
+
+.thumb-tooltips-xd {
+  background-image: url('../img/map/badge6.png');
+}
+
+.calculate-result_table,
+.vote-result_table {
+  width: 100%;
+
+  border-spacing: 1px;
+  border-collapse: separate;
+
+  text-align: center;
+}
+
+.calculate-result_table tr td,
+.calculate-result_table tr th,
+.vote-result_table tr td,
+.vote-result_table tr th {
+  padding: 5px;
+}
+
+.vote-result_table thead {
+  color: white;
+  background: #339a99;
+}
+
+.vote-result_table tfoot,
+.vote-result-lastCol,
+td.merge-data,
+tr.merge-data {
+  background: #c3eae9;
+}
+
+.vote-result_table tfoot,
+.vote-result_table thead,
+.vote-result-lastCol {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.actual-data_cal,
+tr.actual-data {
+  background: #e6e6e6;
+}
+
+
+.all-calculated {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie-container,
+.calculate-all {
+  width: 50%;
+}
+
+.history-year-container-data {
+  background: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+
+  width: 100%;
+  padding: 20px 10px;
+
+  -webkit-flex-flow: column wrap;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.history-year-container-data section {
+  margin-bottom: 10px;
+}
+.history-year-container.current-data {
+  margin-top: 10px;
+}
+
+.history-year-datatable,
+.all-calculated,
+.history-year-container-data h3 {
+  width: 100%;
+}
+
+.history-year-container-map.area h3,
+.history-year-container-data.area h3 {
+  line-height: 1;
+
+  margin-bottom: 10px;
+  padding: 10px 0;
+
+  border: 0;
+  background-image: none;
+}
+
+.map-note {
+  font-size: 1rem;
+
+  padding-top: 10px;
+}
+
+.history-year-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  padding: 8px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.history-year-container-map {
+  width: 100%;
+  padding: 10px;
+
+  background: #f2f2f2;
+}
+
+.history-year-container-map img {
+  width: 100%;
+}
+
+.infogram-data_css {
+  font-family: Arial;
+  font-size: 10px;
+
+  width: 100%;
+  padding-top: 3px;
+
+  text-align: center;
+
+  border-top: 1px solid #acacac;
+}
+
+.infogram-data_css a {
+  text-decoration: none;
+
+  color: #acacac;
+}
+
+.president-elected {
+  display: block;
+
+  width: 36px;
+  height: 36px;
+  margin: 0 auto;
+
+  background: url('../img/vote2.png') center no-repeat;
+  background-size: 100%;
+}
+
+.flag.president-elected {
+  width: 50px;
+  height: 50px;
+}
